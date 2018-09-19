@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <h1>
+        <title>Welcome to first-app!</title>
+    </h1>
+
+</head>
+
+
+<body id="LoginForm">
+    <div class="container">
+        <div class="clearfix">
+            <nav>
+        <h1 class="form-heading"></h1>
+        <div ng-app="first-app" ng-controller="myCtrl" class="login-form">
+
+            <div class="main-div">
+
+                <div class="panel">
+                   
+                    <h2 align="center" class="modal-title" id="exampleModalLongTitle">Login</h2>
+                    <p>Please enter your user Id and Password</p>
+                </div>
+
+                <form id="Login" ng-submit="login()">
+
+                    <div class="form-group">
+
+
+                        <input type="text" name="userid" class="form-control" id="userid" placeholder="userid" [(ngModel)]="model.userId">
+
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="model.password">
+
+                    </div>
+
+
+
+
+                    <button type="submit" class="btn btn-primary" (click)="addUser()">Login</button>
+                  
+
+ 
+
+
+                </form>
+
+            </div>
+
+        </div>
+ 
+            </nav>
+          
+        </div>
+    </div>
+   
+ 
+</body>
+<router-outlet></router-outlet>
+
+</html>
+

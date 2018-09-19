@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class=" clearfix">
+      <nav>
+
+        <h2 class="text-muted header">Department manager</h2>
+
+        <ul class="nav nav-pills float-right">
+          <li class="nav-item">
+            <!-- <button type="button" data-toggle="modal" data-target="#addModalLong" class="">Add</button> -->
+            <a id="click" routerLink="/departmentadd">Department Add</a>
+          </li>
+
+          <li class="nav-item">
+            <a id="click" routerLink="/departmentdelete">Department Delete</a>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a id="click" routerLink="/departmentupdate">Department Update</a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

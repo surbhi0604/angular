@@ -1,0 +1,72 @@
+<!-- <div class="modal fade" id="addModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLongTitle">Add Employee</h2>
+        </div>-->
+
+<body id="img1">
+  <h3 align="center" class="modal-title" id="exampleModalLongTitle">Add Department Details</h3>
+  <div class="main-div">
+
+    <h4>
+      <span>Department ID</span>
+    </h4>
+    <input type="text" id="did" class="form-control" required minlength="1" pattern="[0-9]{0,9}" InputText placeholder="Department ID"
+      [(ngModel)]="model.deptId" #did="ngModel">
+    <div *ngIf="did.invalid && (did.dirty || did.touched)" class="alert alert-danger">
+
+      <div *ngIf="did.errors.required">
+        Department Id is required.
+      </div>
+      <div *ngIf="did.errors.minlength">
+        Department Id must be at least 1 digits long.
+      </div>
+      <div *ngIf="did.errors.pattern">
+        Department Id must contain only digits.
+      </div>
+    </div>
+    <h4>
+      <span>Department Name</span>
+    </h4>
+    <input type="text" id="dname" required minlength="2" pattern="[A-Za-z]{0,50}" InputText placeholder="Department Name" [(ngModel)]="model.deptName"
+      #dname="ngModel">
+    <div *ngIf="dname.invalid && (dname.dirty || dname.touched)" class="alert alert-danger">
+
+      <div *ngIf="dname.errors.required">
+        Department name is required.
+      </div>
+      <div *ngIf="dname.errors.minlength">
+        Department name must be at least 2 characters long.
+      </div>
+      <div *ngIf="dname.errors.pattern">
+        Department name must contain only characters.
+      </div>
+    </div>
+    <h4>
+      <span>Department Manager</span>
+    </h4>
+    <input type="text" id="mname" required minlength="2" pattern="[A-Za-z]{0,50}" InputText placeholder="Department Manager"
+      [(ngModel)]="model.deptManager" #mname="ngModel">
+    <div *ngIf="mname.invalid && (mname.dirty || mname.touched)" class="alert alert-danger">
+
+      <div *ngIf="mname.errors.required">
+        Manager name is required.
+      </div>
+      <div *ngIf="mname.errors.minlength">
+        Manager name must be at least 2 characters long.
+      </div>
+      <div *ngIf="mname.errors.pattern">
+        Manager name must begin with a Capital letter and contain only characters.
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal-footer"> -->
+  <div style="text-align: center">
+    <button type="button" class="btn btn-secondary" routerLink="/departmentlist" data-dismiss="modal">Close</button>
+    <button type="button" (click)="addDept()" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+  </div>
+</body>
+<!-- </div>
+    </div>
+  </div> -->

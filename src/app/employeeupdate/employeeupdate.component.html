@@ -1,0 +1,96 @@
+<body id="img1">
+
+
+  <h3 align="center" class="modal-title" id="exampleModalLongTitle">Update Employee Details</h3>
+  <div class="main-div">
+    <h4>
+      <span>Employee Name</span>
+    </h4>
+    <input type="text" id="name" class="form-control" required minlength="2" pattern="[A-Za-z]{0,50}" pInputText placeholder="Employee Name"
+      [(ngModel)]="model.userName" #name="ngModel">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+      <div *ngIf="name.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors.minlength">
+        Name must be at least 2 characters long.
+      </div>
+      <div *ngIf="name.errors.pattern">
+        Name must contain only characters.
+      </div>
+    </div>
+
+    <h4>
+      <span>Employee SSO</span>
+    </h4>
+    <input type="text" name=usersso id="sso" class="form-control" pInputText placeholder="Employee SSO" required minlength="8"
+      pattern="[0-9]{0,10}" [(ngModel)]="model.userSSO" #sso="ngModel">
+    <div *ngIf="sso.invalid && (sso.dirty || sso.touched)" class="alert alert-danger">
+
+      <div *ngIf="sso.errors.required">
+        SSO is required.
+      </div>
+      <div *ngIf="sso.errors.minlength">
+        SSO must be 8 digits long.
+      </div>
+      <div *ngIf="sso.errors.pattern">
+        SSO Id must contain only digits.
+      </div>
+    </div>
+    <h4>
+      <span>Employee ID</span>
+    </h4>
+    <input type="text" id="eid" class="form-control" required minlength="6" pattern="[0-9]{0,6}" pInputText placeholder="Employee ID"
+      [(ngModel)]="model.employeeID" #eid="ngModel">
+
+    <div *ngIf="eid.invalid && (eid.dirty || eid.touched)" class="alert alert-danger">
+
+      <div *ngIf="eid.errors.required">
+        Employee Id is required.
+      </div>
+      <div *ngIf="eid.errors.minlength">
+        Employee Id must be at least 6 digits long.
+      </div>
+      <div *ngIf="eid.errors.pattern">
+        Employee Id must contain only digits.
+      </div>
+    </div>
+    <h4>
+      <span>Location</span>
+    </h4>
+    <input type="text" id="loc" class="form-control" required pattern="[A-Za-z]{0,50}" pInputText placeholder="Location" [(ngModel)]="model.location"
+      #loc="ngModel">
+    <div *ngIf="loc.invalid && (loc.dirty || loc.touched)" class="alert alert-danger">
+
+      <div *ngIf="loc.errors.required">
+        Location is required.
+      </div>
+      <div *ngIf="loc.errors.pattern">
+        Location must contain only characters.
+      </div>
+    </div>
+    <h4>
+      <span>Backgroung Check Flag</span>
+    </h4>
+
+    <input type="text" id="bg" class="form-control" required pattern="[A-Za-z]{0,1}" pInputText placeholder="Backgroung Check Flag (Y/N)"
+      [(ngModel)]="model.backGroundFlag" #bg="ngModel">
+    <div *ngIf="bg.invalid && (bg.dirty || bg.touched)" class="alert alert-danger">
+
+      <div *ngIf="bg.errors.required">
+        Backgroung Check Flag is required.
+      </div>
+      <div *ngIf="loc.errors.pattern">
+        Backgroung Check Flag must be Y/N.
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center">
+    <button type="button" class="btn btn-secondary" routerLink="/employeelist" data-dismiss="modal">Close</button>
+    <button type="button" (click)="updateEmployee(employee)" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+  </div>
+
+
+</body>

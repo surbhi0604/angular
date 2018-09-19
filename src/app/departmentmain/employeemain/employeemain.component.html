@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+
+        <h2 class="text-muted header"></h2>
+
+        <ul class="nav nav-pills float-right">
+
+
+          <li class="nav-item">
+            <!-- <button type="button" data-toggle="modal" data-target="#addModalLong" class="">Add</button> -->
+            <a id="click" routerLink="/employeeadd">Employee Add</a>
+          </li>
+
+          <li class="nav-item">
+            <a id="click" routerLink="/employeedelete">Employee Delete</a>
+          </li>
+
+          <li class="nav-item">
+            <a id="click" routerLink="/employeelist">Employee List</a>
+          </li>
+
+          <li class="nav-item">
+            <a id="click" routerLink="/employeeupdate">Employee Update</a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

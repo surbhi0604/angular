@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <h1>
+    <title>Welcome to first-app!</title>
+  </h1>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    th,
+    td {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body id="img1">
+  <h3 align="center">
+    Department Details</h3>
+  <div class="listContainer">
+
+    <div class="nav-item">
+      <!-- <button type="button" data-toggle="modal" data-target="#addModalLong" class="">Add</button> -->
+      <a type="button" class="btn btn-primary" id="click" routerLink="/departmentadd">Department Add</a>
+    </div>
+
+    <!--<li class="nav-item">
+          <a id="click" routerLink="/departmentdelete" >Department Delete</a>
+        </li>
+  
+  
+        <li class="nav-item">
+          <a id="click" routerLink="/departmentupdate" >Department Update</a>
+        </li>-->
+
+    <ul></ul>
+    <table align="center">
+      <tr>
+        <th *ngFor="let col of columns">{{col.header}}</th>
+      </tr>
+      <tr *ngFor="let department of departmentList">
+        <!--<td *ngFor="let col of columns">
+        {{department[col.field]}}
+      </td>-->
+        <td> {{department.deptId}}
+        </td>
+        <td> {{department.deptName}}
+        </td>
+        <td> {{department.deptManager}}
+        </td>
+
+
+        <td><button class="btn btn-primary" (click)="updateDepartment()">edit</button></td>
+        <td><button class="btn btn-primary" (click)=" deleteDepartment(department.deptId)">delete</button></td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>

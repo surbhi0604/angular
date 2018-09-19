@@ -1,0 +1,35 @@
+/*.listContainer{
+    border: 1px solid rgb(187, 170, 170);
+    border-radius: 10px;
+    padding: 30px;
+  }*/
+body#add{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
+
+.try{
+  color: black;
+   /*border: 1px solid rgb(187, 170, 170);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 10px 10px;*/
+    width: 300px;
+    border: 10px solid #d4d4d4;
+    padding: 25px;
+    margin: 25px;
+    border-radius: 10px;
+    border-style: groove;
+}
+.main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 38%;
+  padding: 50px 70px 70px 71px;
+}
+.button
+{
+  width: 150px;
+  text-align: center;
+  margin:0 auto;
+
+}
+

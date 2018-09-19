@@ -1,0 +1,27 @@
+<body id="img1">
+  <h3 align="center" class="modal-title" id="exampleModalLongTitle">Delete Employee Details</h3>
+
+
+  <h3>
+    <span>Employee ID:</span>
+  </h3>
+  <input type="text" id="eid" class="form-control" required minlength="6" pattern="[0-9]{0,6}" pInputText placeholder="Employee ID"
+    [(ngModel)]="model.employeeID" #eid="ngModel">
+  <div *ngIf="eid.invalid && (eid.dirty || eid.touched)" class="alert alert-danger">
+
+    <div *ngIf="eid.errors.required">
+      Employee Id is required.
+    </div>
+    <div *ngIf="eid.errors.minlength">
+      Employee Id must be at least 6 digits long.
+    </div>
+    <div *ngIf="eid.errors.pattern">
+      Employee Id must contain only digits.
+    </div>
+  </div>
+  <ul></ul>
+  <div>
+    <button type="button" class="btn btn-secondary" routerLink="/employeelist" data-dismiss="modal">Close</button>
+    <button type="button" (click)="deleteEmployee()" data-dismiss="modal" class="btn btn-primary">Delete Employee</button>
+  </div>
+</body>

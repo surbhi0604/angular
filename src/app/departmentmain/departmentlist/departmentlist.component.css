@@ -1,0 +1,45 @@
+body#img1{ background-image:url("img.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
+.listContainer {
+    border: 1px solid rgb(49, 45, 45);
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  .ui-sidebar {
+    overflow-y: auto;
+  }
+  
+  .ui-table table {
+    font-size: 0.85em;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+  
+  .table-row-header {
+    border: 1px solid rgb(68, 53, 202);
+    border-radius: 10px;
+    padding: 30px;
+    height: toPixel(41);
+  }
+  
+  .magic-table-row-footer {
+    height: toPixel(20);
+  }
+  
+  .ui-table .ui-table-tfoot>tr>td {
+    color: blue;
+  }

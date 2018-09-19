@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <h1>
+    <title>Welcome to first-app!</title>
+  </h1>
+  <style>
+    table,
+    td,
+    th {
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    th,
+    td {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body id="img1">
+
+  <h3 align="center">
+    Employee Details</h3>
+  <div class="listContainer">
+
+    <div class="nav-item">
+
+      <a type="button" class="btn btn-primary" id="click" routerLink="/employeeadd">Employee Add</a>
+    </div>
+
+    <div class="buttons">
+      <a type="button" class="btn btn-primary" routerLink="/postlogin" data-dismiss="modal">Back</a>
+    </div>
+
+    <div class="one">
+      <a type="button" class="btn btn-primary" (click)="logout()" routerLink="/" data-dismiss="modal">Log Out</a>
+    </div>
+    <ul> &nbsp;</ul>
+    <table align="center">
+      <tr>
+
+        <th *ngFor="let col of columns">{{col.header}}</th>
+
+      </tr>
+
+      <tr *ngFor="let employee of employeeList">
+
+        <td> {{employee.username}}
+        </td>
+        <td> {{employee.usersso}}
+        </td>
+        <td> {{employee.employeeid}}
+        </td>
+        <td> {{employee.location}}
+        </td>
+        <td> {{employee.backgroundflag}}
+        </td>
+
+        <td><button class="btn btn-primary" (click)="updateEmployee(employee)">edit</button></td>
+        <td><button class="btn btn-primary" (click)="deleteEmployee(employee.employeeid)">delete</button></td>
+      </tr>
+
+    </table>
+
+  </div>
+  <p align="center" class="msg_success">{{ msg }}</p>
+</body>
+
+</html>
+
+<!--<table>
+    <thead><tr><th>Name</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>
+          <input type="text" [(ngModel)]="employee.name" [disabled]="!employee.isEditable"/>
+        </td>
+        <td>
+          <button (click)="employee.isEditable=!employee.isEditable" *ngIf="!employee.isEditable">Edit</button>
+          <button *ngIf="employee.isEditable" (click)="employee.isEditable=!employee.isEditable">Save</button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>-->
